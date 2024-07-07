@@ -3,8 +3,10 @@ html, body {
   padding: 0;
   height: 100%;
   overflow: hidden;
+  background-color: #1d3557;
+  font-family: "Fredoka", sans-serif;
+  color: white
 }
-body{
-  background-color: black;
-  color:white;
+input[type=text]{
+  color: black;
 }

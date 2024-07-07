@@ -1,24 +1,23 @@
 import { useState } from "react"
 import Categories from "./Categories"
-import Rightbar from "./Rightbar"
+import Feed from "./Feed";
 
-type searchProp = {
-  search:any
-}
+const Home = () => {
 
-const Home = (props:searchProp) => {
-
-  const [menu,setMenu] = useState("")
+  const [menu,setMenu] = useState("");
+  const [search, setSearch] = useState('');
 
   return (
+    <>
     <div className="w-screen grid grid-cols-7 ">
         <div className="col-span-2">
-        <Categories setMenu={setMenu}/>
+        <Categories setMenu={setMenu} search={search}/>
         </div>
         <div className="col-span-4">
-          <Rightbar search={props?.search} menu={menu}/>
+          <Feed menu={menu} search={search}/>
         </div>
     </div>
+    </>
   )
 }
 

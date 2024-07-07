@@ -11,7 +11,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="bg-stone-400 text-black flex items-center justify-center min-h-screen">
+    <div className="bg-stone-400 text-black font-serif flex items-center justify-center min-h-screen">
       <div className="bg-stone-100 h-5/6 w-7/12 rounded-3xl p-8 overflow-hidden flex flex-col">
         <nav className="flex justify-between items-center mb-8">
           <div className="text-2xl font-bold">Seekr</div>
@@ -27,7 +27,7 @@ const LandingPage = () => {
             </a>
             <button
               onClick={toggleLogin}
-              className="bg-purple-600 text-white px-4 py-2 rounded-lg"
+              className="bg-slate-800 text-white px-4 py-2 rounded-lg"
             >
               Login
             </button>
@@ -40,7 +40,7 @@ const LandingPage = () => {
           <div className="relative w-full max-w-md">
             <input
               type="text"
-              className="w-full border rounded-full py-2 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600"
+              className="w-full border rounded-full py-2 px-4 text-gray-700 focus:outline-none focus:ring-2 focus:ring-slate-800"
               placeholder="Debug my code ?"
             />
             <div className="absolute right-4 top-2"></div>

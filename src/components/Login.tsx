@@ -75,7 +75,7 @@ const Signup = () => {
         </div>
         <h1 className="text-zinc-400 text-sm w-72">By continuing you indicate that you agree to our
         <span className="text-cyan-700"> Terms of Service</span> and <span  className="text-cyan-700">Privacy Policy.</span></h1>
-        <h1 onClick={()=>setEmailSignup(true)} className="text-center text-sm bg-purple-600 font-semibold text-white mt-3 hover:bg-gray-100 rounded-full cursor-pointer p-1">Sign up with email</h1>
+        <h1 onClick={()=>setEmailSignup(true)} className="text-center text-sm bg-slate-800 font-semibold text-white mt-3 hover:bg-gray-100 rounded-full cursor-pointer p-1">Sign up with email</h1>
         </div>
         <div className="ml-16">
            <h1>Login</h1>
@@ -86,7 +86,7 @@ const Signup = () => {
            <input type="password" onChange={(e)=> setPassword(e.target.value)} placeholder="Your Password" className="border border-spacing-1 p-2 w-72 mt-2"/>
            <div className="flex mt-4">
            <h1 className="text-zinc-400 text-sm mt-2 hover:underline cursor-pointer">Forgot password?</h1>
-           <button onClick={login} className="bg-purple-600 text-white p-2 w-20 ml-24 rounded-lg">Login</button>
+           <button onClick={login} className="bg-slate-800 text-white p-2 w-20 ml-24 rounded-lg">Login</button>
            </div>
         </div>
         </div>
