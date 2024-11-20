@@ -1,6 +1,5 @@
 import Avatar from "react-avatar";
 import Categories from "./Categories";
-import Searchbar from "./Searchbar";
 import account from "../assets/account.png";
 import { getFirestore, doc, getDoc, collection, getDocs } from "firebase/firestore";
 import { useLocation } from "react-router-dom";
@@ -48,14 +47,13 @@ const Answers = () => {
 
   return (
     <>
-    <Searchbar setSearch={search}/>
-    <div className="grid grid-cols-6 gap-2 ml-2 mr-2">
+    <div className="grid grid-cols-6 gap-2 ml-2 mr-2 text-black ">
       <div className="col-span-2"><Categories setMenu={setMenu} search={search}/></div>
-      <div className="col-span-4 bg-neutral-800 rounded-2xl mt-2 ">
+      <div className="col-span-4 bg-stone-200 rounded-2xl mt-2 p-8 ">
       {questionData && (
         <div>
-          <h1 className="text-2xl font-bold">{questionData.question}</h1>
-          <p className="text-lg">{questionData.email}</p>
+          <h1 className="text-2xl font-semibold">{questionData.question}</h1>
+          <p className="text-lg ml-8">{questionData.email}</p>
         </div>
       )}
       {answerData.map((data:any, index:number) => {

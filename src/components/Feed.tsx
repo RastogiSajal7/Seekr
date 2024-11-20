@@ -57,9 +57,9 @@ const Feed = (props: searchProp) => {
   }
 
   return (
-    <div className="bg-slate-700 m-2 rounded-2xl p-2 pb-4">
+    <div className="bg-stone-300 m-2 rounded-2xl p-2 pb-4 text-black">
       <div className="p-2 rounded-sm ">
-        <div className="bg-slate-600 rounded-2xl p-2 h-20 border border-spacing-1">
+        <div className="bg-stone-500 rounded-2xl p-2 h-20 border border-spacing-1">
           <div className="flex">
             {auth?.currentUser?.emailVerified ? <Avatar round size="25" className="mt-0.5 ml-1 cursor-pointer" name={auth?.currentUser?.email ?? account} />
               : <Avatar round size="25" className="mt-0.5 ml-1 cursor-pointer" src={account} />}
@@ -86,10 +86,10 @@ const Feed = (props: searchProp) => {
         </div>
       </div>
       {/*  The feed area  */}
-      <div className="overflow-y-auto bg-slate-700 h-screen p-8 scrollbar-hide">
+      <div className="overflow-y-auto bg-stone-300 h-screen p-8 scrollbar-hide">
         {questionData.filter((data: any) => props?.search ? data?.question.includes(props?.search) : data?.question?.includes(props?.menu)).map((data: any, index: number) => {
           return (
-            <motion.div whileHover={{ scale: 1.05 }} key={index} className="bg-slate-500 rounded-2xl mt-2 p-2">
+            <motion.div whileHover={{ scale: 1.05 }} key={index} className="bg-stone-500 rounded-2xl mt-2 p-2">
               <div className="flex">
                 {auth?.currentUser?.emailVerified ? <Avatar round size="25" className="mt-0.5 ml-1 cursor-pointer" name={data?.email ?? account} />
                   : <Avatar round size="25" className="mt-0.5 ml-1 cursor-pointer" src={account} />}
@@ -107,8 +107,8 @@ const Feed = (props: searchProp) => {
               {commentToggle && <div className="flex mt-3">
                 {auth?.currentUser?.emailVerified ? <Avatar round size="35" className="mt-0.5 ml-1 cursor-pointer" name={auth?.currentUser?.email ?? account} />
                   : <Avatar round size="25" className="mt-0.5 ml-1 cursor-pointer" src={account} />}
-                <input onChange={(e) => setAnswers(e.target.value)} placeholder="Add a comment" className="bg-zinc-100
-      p-1 ml-4 placeholder-gray-600 border border-spacing-1 rounded-full w-full h-10" />
+                <textarea onChange={(e) => setAnswers(e.target.value)} placeholder="Add a comment" className="bg-zinc-100
+      p-4 ml-4 placeholder-gray-600 border border-spacing-1 rounded-full w-full h-10 overflow-hidden" />
                 <Link to="/answers" state={{ id: data?.id }}><button onClick={() => {
                   addAnswer()
                   setCommentToggle(false)

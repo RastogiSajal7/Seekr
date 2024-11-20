@@ -21,7 +21,7 @@ const Categories = (props: MenuProp) => {
   return (
     <div className="m-2 ">
       <Searchbar setSearch={props.setMenu}/>
-      <div className=" bg-slate-700 rounded-2xl pl-5 pt-5 text-sm pr-5">
+      <div className=" bg-stone-500 rounded-2xl pl-5 pt-5 text-sm pr-5">
         {categories.map((data: any, index: number) => (
           <motion.div key={index}
           whileHover={{scale: 1.2}}

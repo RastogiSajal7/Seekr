@@ -13,9 +13,9 @@ const Searchbar = (props: searchProp) => {
   const [post, setPost] = useState(false)
 
   return (
-    <div className="mb-2 rounded-2xl pb-8 bg-slate-700 pt-3 shadow-md">
+    <div className="mb-2 rounded-2xl pb-8 bg-stone-500 pt-3 shadow-md">
       <div className="flex justify-around">
-        <p className="w-24 text-4xl text-purple-500 font-mono cursor-pointer">Seekr</p>
+        <p className="w-24 text-4xl font-mono cursor-pointer">Seekr</p>
         {auth?.currentUser?.emailVerified ? <Avatar round size="25" className="mt-0.5 ml-2 cursor-pointer" name={auth?.currentUser?.email ?? account} />
           : <Avatar round size="25" className="mt-0.5 ml-2 cursor-pointer" src={account} />}
       </div>
